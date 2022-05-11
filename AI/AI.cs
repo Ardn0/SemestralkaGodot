@@ -73,6 +73,7 @@ public class AI : KinematicBody2D
 
             casovac.Paused = false;
             casovac.Stop();
+            Modulate = Colors.Chocolate;
 
             if (Mic.smerX < 0)
             {
@@ -210,7 +211,7 @@ public class AI : KinematicBody2D
                 UtokSchopnostZpomalHrace();
             }
 
-            if (Mapa3.skore % 10 == 0)
+            if (Mapa3.skore % 10 == 0 & Mapa3.skore != 0)
             {
                 UtokSchopnostProhozeni();
             }

@@ -36,7 +36,7 @@ public class HracDva : KinematicBody2D
 		micNode = GetParent().GetNode<RigidBody2D>("Mic");
 		menuVeHre = GetParent().GetNode<Control>("MenuVeHre");
 		ai = GetParent().GetNode<KinematicBody2D>("AI");
-		hrac = GetParent().GetNode<KinematicBody2D>("Hrac");
+		hrac = GetParent().GetNode<KinematicBody2D>("HracDva");
 		texturaPlosina = GetNode<Sprite>("Textura");
 		casovac = GetNode<Timer>("Casovac");
 		casovac.Start();
@@ -68,7 +68,7 @@ public class HracDva : KinematicBody2D
 	{
 		casovac.Paused = false;
 		casovac.Stop();
-		HracDva.rychlost = 100;
+		Hrac.rychlost = 100;
 		Modulate = Colors.Fuchsia;
 		cisloSchopnosti = 2;
 		casovac.WaitTime = 2;
@@ -81,7 +81,7 @@ public class HracDva : KinematicBody2D
 		{
 			Vector2 puvodniPozice = Position;
 			Position = hrac.Position;
-			hrac .Position = puvodniPozice;
+			hrac.Position = puvodniPozice;
 			Mic.NarazAI = false;
 		}
 	}
@@ -150,7 +150,7 @@ public class HracDva : KinematicBody2D
 
 			if (cisloSchopnosti == 2)
 			{
-				AI.rychlost = 250;
+				Hrac.rychlost = 250;
 				Modulate = Colors.Black;
 			}
 

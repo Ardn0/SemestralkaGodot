@@ -46,6 +46,7 @@ public class Hrac : KinematicBody2D
 		{
 			casovac.Paused = false;
 			casovac.Stop();
+			Modulate = Colors.Chocolate;
 			if (Mic.smerX < 0)
 			{
 				Mic.NastavVlastnostiMice(-350, 0);
@@ -103,9 +104,9 @@ public class Hrac : KinematicBody2D
 	{
 		casovac.Paused = false;
 		casovac.Stop();
-		kolizeMic.Scale = new Vector2(2, 2);
-		kolizeMicArea.Scale = new Vector2(2, 2);
-		texturaMic.Scale = new Vector2((float) 1.35, (float) 1.35);
+		kolizeMic.Scale = new Vector2((float)3.4, (float)3.4);
+		kolizeMicArea.Scale = new Vector2((float)4.3, (float)4.3);
+		texturaMic.Scale = new Vector2((float) 2, (float) 2);
 		Modulate = Colors.Aqua;
 		cisloSchopnosti = 4;
 		casovac.WaitTime = 2;
@@ -144,6 +145,7 @@ public class Hrac : KinematicBody2D
 				{
 					Mic.NastavVlastnostiMice(150, 0);
 				}
+				Modulate = Colors.Black;
 			}
 
 			if (cisloSchopnosti == 2)
@@ -161,9 +163,9 @@ public class Hrac : KinematicBody2D
 
 			if (cisloSchopnosti == 4)
 			{
-				kolizeMic.Scale = new Vector2(1, 1);
-				kolizeMicArea.Scale = new Vector2(1, 1);
-				texturaMic.Scale = new Vector2((float) 0.875, (float) 0.875);
+				kolizeMic.Scale = new Vector2((float)1.7, (float)1.7);
+				kolizeMicArea.Scale = new Vector2((float)2.6, (float)2.6);
+				texturaMic.Scale = new Vector2((float) 1.3, (float) 1.3);
 				Modulate = Colors.Black;
 			}
 
