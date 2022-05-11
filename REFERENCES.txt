@@ -1,0 +1,8 @@
+modely /Textury/* - vlastní tvorba
+dokumentace - https://docs.godotengine.org/en/stable/
+font - https://www.dafont.com/game-over.fon
+save/load - https://kidscancode.org/godot_recipes/basics/file_io/
+časovač - https://docs.godotengine.org/en/stable/classes/class_timer.html
+pohyb - https://docs.godotengine.org/en/stable/tutorials/2d/2d_movement.html
+změna kolize - https://godotengine.org/qa/72120/how-to-change-the-size-of-the-collision-shape-in-script
+změna scény - https://godotengine.org/qa/24773/how-to-load-and-change-scenes

@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semestralka", "Semestralka.csproj", "{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semestralka", "Semestralka.csproj", "{B9503ACD-613B-4B7E-818E-987D6344420B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{405DD4F0-7634-4674-A3FA-8B1EA4BE20AD}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B9503ACD-613B-4B7E-818E-987D6344420B}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

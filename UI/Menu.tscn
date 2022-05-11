@@ -1,0 +1,137 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Font/game_over.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Textury/pozadiMenu.png" type="Texture" id=2]
+[ext_resource path="res://UI/Menu.cs" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 190
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Font/game_over.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 480
+font_data = SubResource( 2 )
+
+[node name="Menu" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -720.0
+margin_top = -450.0
+margin_right = 720.0
+margin_bottom = 450.0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 804, 427 )
+texture = ExtResource( 2 )
+
+[node name="PolozkyMenu" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -163.0
+margin_top = -547.0
+margin_right = 169.0
+margin_bottom = -255.0
+
+[node name="Start" type="Button" parent="PolozkyMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -96.0
+margin_right = 96.0
+margin_bottom = 114.0
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.243137, 0.607843, 0.584314, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "Start"
+flat = true
+
+[node name="NactiHru" type="Button" parent="PolozkyMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -57.0
+margin_right = 150.0
+margin_bottom = 57.0
+hint_tooltip = "Nelze ukladat dokud neni dokoncena Mapa druhe urovne."
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.243137, 0.607843, 0.584314, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+enabled_focus_mode = 0
+text = "Load"
+flat = true
+
+[node name="UlozHru" type="Button" parent="PolozkyMenu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -150.0
+margin_top = -114.0
+margin_right = 150.0
+hint_tooltip = "Nelze ukladat dokud neni dokoncena Mapa druhe urovne."
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0.658824, 0.658824, 0.658824, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.243137, 0.607843, 0.584314, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+enabled_focus_mode = 0
+text = "Save"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="KonecHry" type="Button" parent="PolozkyMenu"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -147.0
+margin_top = 95.0
+margin_right = 153.0
+margin_bottom = 209.0
+focus_mode = 0
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0.243137, 0.607843, 0.584314, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+enabled_focus_mode = 0
+text = "Exit"
+flat = true
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -285.0
+margin_right = 285.0
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 3 )
+text = "PONG!"
+
+[connection signal="pressed" from="PolozkyMenu/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="PolozkyMenu/KonecHry" to="." method="_on_KonecHry_pressed"]

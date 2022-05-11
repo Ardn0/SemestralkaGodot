@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Textury/plosina.png" type="Texture" id=1]
+[ext_resource path="res://Hrac/HracDva.cs" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 56 )
+
+[node name="HracDva" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Kolize" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Casovac" type="Timer" parent="."]
+process_mode = 0
+wait_time = 30.0
+one_shot = true
+
+[node name="Textura" type="Sprite" parent="."]
+position = Vector2( 0, 4.58956e-06 )
+scale = Vector2( 1, 4.6 )
+texture = ExtResource( 1 )

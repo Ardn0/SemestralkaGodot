@@ -1,0 +1,128 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://UI/Prohral.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AI/AI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://UI/SkorePozice.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Mic/Mic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Textury/pozadiMenu.png" type="Texture" id=5]
+[ext_resource path="res://UI/MenuVeHre.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Hrac/Hrac.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Textury/plosina.png" type="Texture" id=8]
+[ext_resource path="res://Mapy/Mapa3.cs" type="Script" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 720.5, 5 )
+
+[sub_resource type="SegmentShape2D" id=2]
+b = Vector2( 0, 900 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 17, 116 )
+
+[node name="Mapa3" type="Node2D" groups=["Ulozeni"]]
+script = ExtResource( 9 )
+
+[node name="Textura" type="Sprite" parent="."]
+modulate = Color( 0.054902, 0.486275, 0.482353, 1 )
+position = Vector2( 627, 517 )
+scale = Vector2( 1.47841, 0.832293 )
+texture = ExtResource( 5 )
+
+[node name="SkorePozice" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.0901961, 0.745098, 0.733333, 1 )
+margin_top = 15.0
+margin_bottom = 55.0
+
+[node name="AI" parent="." groups=["Ulozeni"] instance=ExtResource( 2 )]
+modulate = Color( 0.831373, 0.956863, 0.866667, 1 )
+position = Vector2( 1422, 450 )
+
+[node name="Hrac" parent="." instance=ExtResource( 7 )]
+modulate = Color( 0.831373, 0.956863, 0.866667, 1 )
+position = Vector2( 24, 450 )
+
+[node name="Mic" parent="." groups=["Ulozeni"] instance=ExtResource( 4 )]
+modulate = Color( 0.839216, 0.133333, 0.27451, 1 )
+position = Vector2( 720, 450 )
+
+[node name="Horni" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Horni"]
+position = Vector2( 719.5, 5 )
+shape = SubResource( 1 )
+
+[node name="Spodni" type="StaticBody2D" parent="."]
+position = Vector2( 1024, 600 )
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spodni"]
+position = Vector2( 303.999, -296.001 )
+shape = SubResource( 1 )
+
+[node name="KonecAI" type="Area2D" parent="."]
+position = Vector2( -8, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KonecAI"]
+shape = SubResource( 2 )
+
+[node name="KonecHrac" type="Area2D" parent="."]
+position = Vector2( 1448, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KonecHrac"]
+shape = SubResource( 2 )
+
+[node name="Prekazka" type="StaticBody2D" parent="."]
+position = Vector2( 352, 176 )
+rotation = 0.343487
+scale = Vector2( 0.945082, 0.8847 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Prekazka"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Prekazka"]
+scale = Vector2( 1.5, 9.25 )
+texture = ExtResource( 8 )
+
+[node name="Prekazka2" type="StaticBody2D" parent="."]
+position = Vector2( 656, 712 )
+rotation = -0.355846
+scale = Vector2( 0.954505, 0.883309 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Prekazka2"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Prekazka2"]
+scale = Vector2( 1.5, 9.25 )
+texture = ExtResource( 8 )
+
+[node name="Prekazka3" type="StaticBody2D" parent="."]
+position = Vector2( 1136, 280 )
+rotation = -3.3408
+scale = Vector2( 0.803331, 0.957835 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Prekazka3"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Prekazka3"]
+scale = Vector2( 1.5, 9.25 )
+texture = ExtResource( 8 )
+
+[node name="Prohral" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="MenuVeHre" parent="." instance=ExtResource( 6 )]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 600.0
+margin_top = 430.0
+margin_right = 600.0
+margin_bottom = 430.0
+
+[connection signal="body_entered" from="KonecAI" to="." method="_on_KonecAI_body_entered"]
+[connection signal="body_entered" from="KonecHrac" to="." method="_on_KonecHrac_body_entered"]
